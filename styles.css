@@ -1,0 +1,16 @@
+body {
+    background: black;
+    color: darkorchid;
+}
+
+#loginForm {
+    margin-top: 50px;
+}
+
+#loginOverall {
+    text-align: center;
+}
+
+#accountCreateOverall {
+    text-align: center;
+}
