@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    
     <div id="accountManagementOverall">
         <h1>Videogames of 2016</h1><hr >
         <h3>Account Management: </h3>

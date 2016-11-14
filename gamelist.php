@@ -17,7 +17,7 @@
         <td align="left"><b>Company</b></td></tr>
         
         
-        <!-- Need database information here -->
+        <!-- Need database information here with game search-->
         
     </table>
     
