@@ -11,10 +11,11 @@ $("form").submit(function() {
         return false;
     }
     //TODO: FIX THIS
-    else if (!($("#password").matches("^(?=.*?\\d.*\\d)[a-zA-Z0-9]{8,}$"))) {
-        alert("Password needs to have at least 8 characters with 2 digits");
+    /*
+    else if (!($("#password").matches("/^D+[0-9]+/"))) {
+        alert("Password needs to start with a digit and end with a digit.");
         return false;
-    }
+    }*/
     else return true;
     
 }); 
