@@ -53,6 +53,7 @@
                             $row['rating'] . '</td><td align="left">' .
                             $row['genre'] . '</td><td align="left">' . 
                             $row['company'] . '</td><td align="left">' .
+                            '<form action="gameinfo.php" method="post"><button name="moreInfo" value="' . $row['title'] . '|' . $row['gameplatform'] . '" type="submit">More Info</button></td></form>' .
                             '</tr>';
                     }
 

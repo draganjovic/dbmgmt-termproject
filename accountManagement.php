@@ -68,7 +68,7 @@
 
                 echo '<input type="submit" name="updateFav" value="Update Favorite">';
 
-                echo '</form>';
+                echo '</form><br >';
 
                 //button to delete account
                 echo '<form action="acctdeleted.php" method="post">';
