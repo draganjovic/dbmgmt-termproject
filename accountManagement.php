@@ -14,13 +14,6 @@
             //make sure site was gotten to correctly
             if (!empty($_POST['userName'])) {
                 
-                echo '<label><b>Username:</b> </label>';
-            
-                echo $_POST['userName'];
-            ?>
-            <br ><br >
-            
-            <?php
                 //connect to the database
                 $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
                 //check for failure
@@ -29,50 +22,61 @@
                     exit();
                 }
                 
+                echo '<label><b>Username:</b> </label>';
+            
+                echo $_POST['userName'] . '<br > <br >';
+
+                //new account added (if not new then will look like normal acct page)
+                if (isset($_POST['submit'])) {
+                    $qry = "INSERT INTO USERS (username, accPassword, favoriteTitle, favoritePlatform) values ('" . $_POST['userName'] . "', '" . $_POST['password'] . "', NULL, NULL);";
+
+                    mysqli_query($conn, $qry);
+                }
+                //if favorite updated
+                else if (isset($_POST['updateFav'])) {
+                    //break the game up into two: one for title and one for gameplatform
+                    $gameInfo = explode('|', $_POST['gameChoice']);
+                    $qry = "UPDATE USERS SET favoriteTitle = '" . $gameInfo[0] . "', favoritePlatform = '" . $gameInfo[1] . "' WHERE username = '" . $_POST['userName'] . "';";
+
+                    mysqli_query($conn, $qry);
+
+                }
+                
                 //check if favorite is set
                 $qry = "SELECT favoriteTitle FROM USERS WHERE username = '" . $_POST['userName'] . "';";
                 if ($result = mysqli_query($conn, $qry)) {
                     echo "<b>Current Favorite Game of 2016: </b>" . mysqli_fetch_array($result)['favoriteTitle'] . "<br ><br >";
                 }
-            
-            //new account added (if not new then will look like normal acct page)
-            if (isset($_POST['submit'])) {
-                $qry = "INSERT INTO USERS (username, accPassword, favoriteTitle, favoritePlatform) values ('" . $_POST['userName'] . "', '" . $_POST['password'] . "', NULL, NULL);";
 
-                mysqli_query($conn, $qry);
-            }
-            //if favorite updated
-            else {
-                //break the game up into two: one for title and one for gameplatform
-                $gameInfo = explode('|', $_POST['gameChoice']);
-                $qry = "UPDATE USERS SET favoriteTitle = '" . $gameInfo[0] . "', favoritePlatform = '" . $gameInfo[1] . "' WHERE username = '" . $_POST['userName'] . "';";
-                
-                mysqli_query($conn, $qry);
+                //for updating favorite game
+                echo '<form action="" method="post">';
 
-            }
+                echo '<input type="hidden" name="userName" value="' . $_POST['userName'] . '">';
+                echo '<b>Update Favorite Game: </b>';
+                $qry = "SELECT title, gameplatform FROM VIDEOGAMES";
 
-            //for updating favorite game
-            echo '<form action="" method="post">';
-            
-            echo '<input type="hidden" name="userName" value="' . $_POST['userName'] . '">';
-            echo '<b>Update Favorite Game: </b>';
-            $qry = "SELECT title, gameplatform FROM VIDEOGAMES";
-            
-            //get the values from the database and put them in drop down menu
-                if ($result = mysqli_query($conn, $qry)) {
-                    echo '<select name="gameChoice">';
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo '<option value="' . $row['title'] . '|' . $row['gameplatform'] . '">' . $row['title'] . '</option>';
+                //get the values from the database and put them in drop down menu
+                    if ($result = mysqli_query($conn, $qry)) {
+                        echo '<select name="gameChoice">';
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<option value="' . $row['title'] . '|' . $row['gameplatform'] . '">' . $row['title'] . '</option>';
+                        }
+                        echo '</select>  ';
+
+                        $result->close();
                     }
-                    echo '</select>  ';
 
-                    $result->close();
-                }
-            
-            echo '<input type="submit" name="updateFav" value="Update Favorite">';
-            
-            echo '</form>';
-            
+                echo '<input type="submit" name="updateFav" value="Update Favorite">';
+
+                echo '</form>';
+
+                //button to delete account
+                echo '<form action="acctdeleted.php" method="post">';
+                
+                echo '<input type="hidden" name="userName" value="' . $_POST['userName'] . '">';
+                echo '<input type="submit" name="deleteacct" value="Delete Account">';
+                
+                echo '</form>';
             
             
             $conn->close();
