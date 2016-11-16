@@ -3,6 +3,10 @@ body {
     color: darkorchid;
 }
 
+h1 {
+    text-align: center;
+}
+
 #loginForm {
     margin-top: 50px;
 }
@@ -13,4 +17,8 @@ body {
 
 #accountCreateOverall {
     text-align: center;
+}
+
+#signup {
+    text-align: right;
 }
