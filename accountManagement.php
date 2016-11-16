@@ -28,6 +28,12 @@
                     printf("connection failed %s\n", $conn->connect_error);
                     exit();
                 }
+                
+                //check if favorite is set
+                $qry = "SELECT favoriteTitle FROM USERS WHERE username = '" . $_POST['userName'] . "';";
+                if ($result = mysqli_query($conn, $qry)) {
+                    echo "<b>Current Favorite Game of 2016: </b>" . mysqli_fetch_array($result)['favoriteTitle'] . "<br ><br >";
+                }
             
             //new account added (if not new then will look like normal acct page)
             if (isset($_POST['submit'])) {
@@ -49,7 +55,7 @@
             echo '<form action="" method="post">';
             
             echo '<input type="hidden" name="userName" value="' . $_POST['userName'] . '">';
-            echo 'Favorite: ';
+            echo '<b>Update Favorite Game: </b>';
             $qry = "SELECT title, gameplatform FROM VIDEOGAMES";
             
             //get the values from the database and put them in drop down menu
