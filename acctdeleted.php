@@ -9,7 +9,7 @@
 
     <?php
         
-        header('Refresh: 5;url=gamelist.php');
+        header('Refresh: 3;url=gamelist.php');
         if (isset($_POST['deleteacct'])) {
             //connect to the database
             $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
