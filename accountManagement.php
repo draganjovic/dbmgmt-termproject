@@ -19,6 +19,28 @@
             <?php 
                 echo $_POST['password'];
             ?>
+            
+            <?php
+                //connect to the database
+                $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
+                //check for failure
+                if ($conn->connect_errno) {
+                    printf("connection failed %s\n", $conn->connect_error);
+                    exit();
+                }
+            
+            $qry = "INSERT INTO USERS (username, accPassword, favoriteTitle, favoritePlatform) values ('" . $_POST['userName'] . "', '" . $_POST['password'] . "', NULL, NULL);";
+            
+            if(mysqli_query($conn, $qry)) {
+             echo "Success!";   
+            }
+            else {
+                echo 'failure';
+            }
+            
+            $conn->close();
+            
+            ?>
         
         <!--Need to add favorite game option list -->
         <form action="" method="post">
