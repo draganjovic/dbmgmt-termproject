@@ -21,7 +21,7 @@
 
             $qry = "DELETE FROM USERS WHERE username = '" . $_POST['userName'] . "';";
             if (mysqli_query($conn, $qry)) {
-                echo "Account Sucessfully Deleted";
+                echo "Account Sucessfully Deleted.  This page will redirect shortly.";
             }
 
             $conn->close();

@@ -62,10 +62,6 @@
                     $result->close();
                 }
 
-        ?>
-
-
-        <?php
             $conn->close();
         ?>
 

@@ -11,7 +11,7 @@
         <h1>Videogames of 2016</h1><hr >
         <h3>Account Creation Form: </h3>
         <form action="accountManagement.php" method="post">
-            <p>Username and password can be up to 20 characters in length.</p><p>Password must start and end with a digit.</p>
+            <p>Username and password can be up to 20 characters in length.</p>
             <label><b>Username: </b></label><input type="text" id="userName" name="userName" size="20" maxlength="20"><br ><br >
             <label><b>Password: </b></label><input type="text" id="password" name="password" size="20" maxlength="20"><br ><br >
             <label><b>Retype Password: </b></label><input type="text" id="passwordCheck" name="passwordCheck" size="20" maxlength="20"><br ><br >
