@@ -1,6 +1,6 @@
 body {
     background: black;
-    color: darkorchid;
+    color: whitesmoke;
 }
 
 h1 {
@@ -21,4 +21,12 @@ h1 {
 
 #signup {
     text-align: right;
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:visited {
+    color: chartreuse;
 }

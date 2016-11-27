@@ -8,7 +8,7 @@
     <div id="gamelistOverall">
         <h1>Videogames of 2016</h1>
         <div id="signup">
-            <a href="accountcreate.php">Sign Up</a>
+            <a href="loggingout.php?logout=1">Logout</a>
         </div>
         <hr >
 
