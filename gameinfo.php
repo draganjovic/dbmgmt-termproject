@@ -6,10 +6,10 @@
 </head>
 <body>
 
-    <h1>Videogames of 2016</h1><hr >
+    <h1>Videogames of 2016</h1>
     <div id="logout">
         <a href="loggingout.php?logout=1">Logout</a>
-    </div>
+    </div> <hr />
     <h3>Game Info: </h3>
     
     <?php
@@ -23,15 +23,20 @@
         }
     
         //break the game up into two: one for title and one for gameplatform
-        $gameInfo = explode('|', $_POST['moreInfo']);
-    
-        $qry = "SELECT * FROM VIDEOGAMES WHERE title = '" . $gameInfo[0] . "' AND gameplatform = '" . $gameInfo[1] . "';";
-    
-        if ($result = mysqli_query($conn, $qry)) {
-            $row = mysqli_fetch_array($result);
-            echo 'Title: ' . $row['title'] . '<br >Platform: ' . $row['gameplatform'] . '<br >Release Date: ' . $row['releasedate'] . '<br >Genre: ' . $row['genre'] . "<br >Company: " . $row['company'] . "<br ><br >Summary: " . $row['summary'];
+        if (isset($_POST['moreInfo'])) {
+            $gameInfo = explode('|', $_POST['moreInfo']);
+
+            $qry = "SELECT * FROM VIDEOGAMES WHERE title = '" . $gameInfo[0] . "' AND gameplatform = '" . $gameInfo[1] . "';";
+
+            if ($result = mysqli_query($conn, $qry)) {
+                $row = mysqli_fetch_array($result);
+                echo 'Title: ' . $row['title'] . '<br >Platform: ' . $row['gameplatform'] . '<br >Release Date: ' . $row['releasedate'] . '<br >Genre: ' . $row['genre'] . "<br >Company: " . $row['company'] . "<br ><br >Summary: " . $row['summary'];
+            }
         }
-    
+        else {
+            $conn->close();
+            header('Location: login.php');
+        }
         $conn->close();
     ?>
     
