@@ -11,6 +11,7 @@
         
         <div id="accountInformation">
             <?php 
+                session_start();
             //make sure site was gotten to correctly
             
             if (!empty($_POST['userName'])) {
@@ -89,8 +90,8 @@
 
                     echo '</form>';
             
-                    $conn->close();
                 }
+                 $conn->close();
             }
             else {
                 echo "No information to display.";

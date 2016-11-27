@@ -19,18 +19,18 @@
             }
             
             $qry = "SELECT * FROM users WHERE username = '{$_POST['userName']}' AND accPassword = '{$_POST['password']}'";
-            echo $qry;
             
             $result = mysqli_query($conn, $qry);
             if ($result !== FALSE) {
-
-                $_SESSION['userName'] = $_POST['userName'];
-                header('Location: gamelist.php');
-                
-            }
-            else {
-                echo "The username or password is invalid";
-                //header('Refresh: 3;url=login.php');
+                if (mysqli_num_rows($result) > 0) {
+                    $conn->close();
+                    $_SESSION['userName'] = $_POST['userName'];
+                    header('Location: gamelist.php');
+                }
+                else {
+                    echo "The username or password is invalid";
+                    header('Refresh: 3;url=login.php');
+                }
             }
             
             $conn->close();

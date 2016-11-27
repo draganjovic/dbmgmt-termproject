@@ -7,9 +7,13 @@
 <body>
 
     <h1>Videogames of 2016</h1><hr >
+    <div id="logout">
+        <a href="loggingout.php?logout=1">Logout</a>
+    </div>
     <h3>Game Info: </h3>
     
     <?php
+        session_start();
         //connect to the database
         $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
         //check for failure
