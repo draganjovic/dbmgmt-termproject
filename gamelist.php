@@ -5,6 +5,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <?php 
+    
+        session_start();
+        if (isset($_SESSION['userName'])) {
+    ?>
     <div id="gamelistOverall">
         <h1>Videogames of 2016</h1>
         <div id="logout">
@@ -63,6 +68,8 @@
                 }
 
             $conn->close();
+        }
+        else header('Location: login.php');
         ?>
 
     </div>

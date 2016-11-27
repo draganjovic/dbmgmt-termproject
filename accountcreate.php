@@ -6,7 +6,14 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 </head>
 <body>
+    <?php 
     
+        session_start();
+        if (isset($_SESSION['userName'])) {
+            header('Location: login.php');
+        }
+    
+    ?>
     <div id="accountCreateOverall">
         <h1>Videogames of 2016</h1><hr >
         <h3>Account Creation Form: </h3>

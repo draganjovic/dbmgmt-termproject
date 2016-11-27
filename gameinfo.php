@@ -14,6 +14,7 @@
     
     <?php
         session_start();
+        if (isset($_SESSION['userName'])) {
         //connect to the database
         $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
         //check for failure
@@ -38,6 +39,8 @@
             header('Location: login.php');
         }
         $conn->close();
+        }
+        else header('Location: login.php');
     ?>
     
 </body>
