@@ -4,7 +4,7 @@ CREATE TABLE VideoGames (
 	gameplatform char(200),
 	rating char(200),
 	releasedate date,
-    image blob,
+    	image blob,
 	genre char(20),
 	company char(20),
 	summary char(200),
