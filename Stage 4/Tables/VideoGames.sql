@@ -8,7 +8,8 @@ CREATE TABLE VideoGames (
 	genre char(20),
 	company char(20),
 	summary char(200),
-
+	
 	PRIMARY KEY(title, gameplatform),
+
 );
 	
