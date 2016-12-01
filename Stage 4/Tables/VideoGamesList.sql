@@ -1,17 +1,17 @@
 INSERT into VideoGames (title, gameplatform, rating, releasedate, image, genre, company, summary)
-	values (‘Far Cry Primal’, ‘Xbox One’, ‘Mature’, ’02/23/2016’, 'http://blogs-images.forbes.com/insertcoin/files/2016/02/far-cry8-1200x675.jpg?width=200&height=200', ‘Open World’, ‘Ubisoft’, ‘Taking down mammoths with spears is as satisfying as anything offered in the previous games, and hunting and scavenging for crafting mats is an all-around great experience.’),
+	values (‘Far Cry Primal’, ‘Xbox One’, ‘Mature’, ’02/23/2016’, ’http://blogs-images.forbes.com/insertcoin/files/2016/02/far-cry8-1200x675.jpg?width=200&height=200’, ‘Open World’, ‘Ubisoft’, ‘Taking down mammoths with spears is as satisfying as anything offered in the previous games, and hunting and scavenging for crafting mats is an all-around great experience.’),
 
-		(‘The Division’, ‘Xbox One’, ‘Mature’, ’03/08/2016’, 'https://zone1-vgu.netdna-ssl.com/wp-content/uploads/2015/07/The-Division-200x200.jpg', ‘Shooter’, ‘Ubisoft’, ‘It truly has an MMO feel, thanks to the upgrade mechanics, and its skill and ability trees.’),
+		(‘The Division’, ‘Xbox One’, ‘Mature’, ’03/08/2016’, ’https://zone1-vgu.netdna-ssl.com/wp-content/uploads/2015/07/The-Division-200x200.jpg’, ‘Shooter’, ‘Ubisoft’, ‘It truly has an MMO feel, thanks to the upgrade mechanics, and its skill and ability trees.’),
 
-		(‘The Witness’, ‘Playstation 4’, ‘Everyone’, ’01/26/2016’, 'http://www.technobuffalo.com/wp-content/uploads/2014/05/The-Witness-5-200x200.jpg', ‘Puzzle’, ‘Thekla’, ‘It’s set in a gorgeous, stylized world, and it’s a puzzle game that will definitely have you scratching your head.’),
+		(‘The Witness’, ‘Playstation 4’, ‘Everyone’, ’01/26/2016’, ’http://www.technobuffalo.com/wp-content/uploads/2014/05/The-Witness-5-200x200.jpg’, ‘Puzzle’, ‘Thekla’, ‘It’s set in a gorgeous, stylized world, and it’s a puzzle game that will definitely have you scratching your head.’),
 
-		(‘Not a Hero’, ‘Playstation 4’, ‘Everyone’, ’02/02/2016’, ‘2D Shooter’, ‘Devolver Digitial’, ‘It follows an anthropomorphic purple rabbit BunnyLord as he travels back in time from the 2048 to become mayor in an effort to save the world.’),
+		(‘Not a Hero’, ‘Playstation 4’, ‘Everyone’, ’02/02/2016’, ’https://services.tegrazone.com/sites/default/files/app-icon/notahero_appicon.png’, ‘2D Shooter’, ‘Devolver Digitial’, ‘It follows an anthropomorphic purple rabbit BunnyLord as he travels back in time from the 2048 to become mayor in an effort to save the world.’),
 
-		(‘Gravity Rush Remastered’, ‘Playstation 4’, ‘Everyone’, ’02/02/2016’, ‘Shooter’, ‘Sony’, ‘In the game, players take control of Kat, a strong female character who has gravity-altering abilities that will help her protect her future.’),
+		(‘Gravity Rush Remastered’, ‘Playstation 4’, ‘Everyone’, ’02/02/2016’, ’http://www.technobuffalo.com/wp-content/uploads/2015/09/Gravity-Rush-1-200x200.jpg’, ‘Shooter’, ‘Sony’, ‘In the game, players take control of Kat, a strong female character who has gravity-altering abilities that will help her protect her future.’),
 
-		(‘Dying Light: The Following Expansion’, ‘Playstation 4’, ‘Teen’, ’02/09/2016’, ‘Open World’, ‘WB Entertainment’, ‘Players are able to drive a buggy, smashing through zombies in their path from mission to mission.’),
+		(‘Dying Light: The Following Expansion’, ‘Playstation 4’, ‘Teen’, ’02/09/2016’, ’http://www.technobuffalo.com/wp-content/uploads/2015/08/Dying-Light-The-Following-1-200x200.jpg’, ‘Open World’, ‘WB Entertainment’, ‘Players are able to drive a buggy, smashing through zombies in their path from mission to mission.’),
 
-		(‘Firewatch’, ‘Playstation 4’, ‘Teen’, ’02/09/2016’, ‘Adventure’, ‘Panic Inc’, ‘The game places you in the role of Henry, a man who leaves his life behind to work as a fire lookout in the Wyoming wilderness. Your job is to look for signs of fire, and keep the wilderness safe.’),
+		(‘Firewatch’, ‘Playstation 4’, ‘Teen’, ’02/09/2016’, ‘http://i.imgur.com/DB2sZYT.jpg‘, ‘Adventure’, ‘Panic Inc’, ‘The game places you in the role of Henry, a man who leaves his life behind to work as a fire lookout in the Wyoming wilderness. Your job is to look for signs of fire, and keep the wilderness safe.’),
 
 		(‘Unravel’, ‘Playstation 4’, ‘Teen’, ’02/09/2016’, ‘Open World’, ‘EA’, ‘You’ll take on the role of Yarny, a cutesy doll created with yarn, and you’re tasked with playing through a hyper realistic world, solving puzzles along the way using unique mechanics only made possible by the fact that you’re made of yarn.’),
 	
