@@ -35,6 +35,14 @@
                 printf("connection failed %s\n", $conn->connect_error);
                 exit();
             }
+            
+            if (isset($_POST['favoriteThis'])) {
+                $gameInfo = explode('|', $_POST['favoriteThis']);
+                $qry = "UPDATE USERS SET favoriteTitle = '" . $gameInfo[0] . "', favoritePlatform = '" . $gameInfo[1] . "' WHERE username = '" . $_SESSION['userName'] . "';";
+
+                mysqli_query($conn, $qry);
+            }
+            
             $qry = "SELECT * FROM VIDEOGAMES";
 
             //search for a value
@@ -58,7 +66,8 @@
                             $row['rating'] . '</td><td align="left">' .
                             $row['genre'] . '</td><td align="left">' . 
                             $row['company'] . '</td><td align="left">' .
-                            '<form action="gameinfo.php" method="post"><button name="moreInfo" value="' . $row['title'] . '|' . $row['gameplatform'] . '" type="submit">More Info</button></td></form>' .
+                            '<form action="gameinfo.php" method="post"><button name="moreInfo" value="' . $row['title'] . '|' . $row['gameplatform'] . '" type="submit">More Info</button></td></form></td><td align="left">' .
+                            "<form action='' method='post'><button name='favoriteThis' value='{$row['title']}|{$row['gameplatform']}' type='submit'>Favorite</button></td></form></td><td align='left'>" .
                             '</tr>';
                     }
 
