@@ -3,7 +3,7 @@
 <head>
     <title>Account Creation</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
     <?php 

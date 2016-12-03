@@ -8,13 +8,15 @@
 
     <h1>Videogames of 2016</h1>
     <div id="logout">
+        <?php
+        session_start();
+        if (isset($_SESSION['userName'])) { ?>
+        Welcome back, <?php echo $_SESSION['userName'] . "!<br >"; ?>
         <a href="loggingout.php?logout=1">Logout</a>
     </div> <hr />
     <h3>Game Info: </h3>
     
-    <?php
-        session_start();
-        if (isset($_SESSION['userName'])) {
+        <?php
         //connect to the database
         $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
         //check for failure
@@ -32,6 +34,9 @@
 
             if ($result = mysqli_query($conn, $qry)) {
                 $row = mysqli_fetch_array($result);
+                $encode = base64_encode($row['image']);
+                $decode = base64_decode($encode);
+                echo "<img src='$decode' /> <br />";
                 echo 'Title: ' . $row['title'] . '<br >Platform: ' . $row['gameplatform'] . '<br >Release Date: ' . $row['releasedate'] . '<br >Genre: ' . $row['genre'] . "<br >Company: " . $row['company'] . "<br ><br >Summary: " . $row['summary'];
             }
             

@@ -30,7 +30,7 @@
                 $numRows = mysqli_num_rows($result);
                 if ($numRows > 0 && isset($_POST['submit'])) {
                     $conn->close();
-                    echo "That account already exists.  This page will redirecting shortly.";
+                    echo "That account already exists.  This page will redirect shortly.";
                     header('Refresh: 3;url=accountcreate.php');
                 }
                 else {
@@ -89,9 +89,9 @@
                     echo '<input type="submit" name="deleteacct" value="Delete Account">';
 
                     echo '</form>';
-            
+                    $conn->close();
                 }
-                 $conn->close();
+                
             }
             else {
                 echo "No information to display.";
