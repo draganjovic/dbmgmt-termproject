@@ -27,12 +27,25 @@
         if (isset($_POST['moreInfo'])) {
             $gameInfo = explode('|', $_POST['moreInfo']);
 
+            //query for the game information
             $qry = "SELECT * FROM VIDEOGAMES WHERE title = '" . $gameInfo[0] . "' AND gameplatform = '" . $gameInfo[1] . "';";
 
             if ($result = mysqli_query($conn, $qry)) {
                 $row = mysqli_fetch_array($result);
                 echo 'Title: ' . $row['title'] . '<br >Platform: ' . $row['gameplatform'] . '<br >Release Date: ' . $row['releasedate'] . '<br >Genre: ' . $row['genre'] . "<br >Company: " . $row['company'] . "<br ><br >Summary: " . $row['summary'];
             }
+            
+            //does a join of two tables to show users who list the game as their favorite
+            $qry = "SELECT username FROM Users JOIN Videogames ON Users.favoritetitle = Videogames.title AND Users.favoriteplatform = Videogames.gameplatform WHERE Videogames.title = '{$gameInfo[0]}' AND Videogames.gameplatform = '{$gameInfo[1]}';";
+            
+            echo '<h3>The following users list this game as their favorite:</h3>';
+            echo '<h4>';
+            if ($result = mysqli_query($conn, $qry)) {
+                while($row = mysqli_fetch_array($result)) {
+                    echo $row['username'] . '<br >';
+                }
+            }
+            echo '</h4>';
         }
         else {
             $conn->close();
