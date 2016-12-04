@@ -8,7 +8,7 @@
 <body>
 
     <?php
-        
+        session_start();
         header('Refresh: 3;url=gamelist.php');
         if (isset($_POST['deleteacct'])) {
             //connect to the database
@@ -25,6 +25,19 @@
             }
 
             $conn->close();
+            
+            //remove the session
+            if(isset($_SESSION['userName'])) {
+                $_SESSION = array();
+                if ($_COOKIE[session_name()]) {
+                    setcookie(session_name(), '', time() - 42000, '/');
+                }
+                session_destroy();
+                header('Location: login.php');
+            }
+            else {
+                header('Location: login.php');
+            }    
         }
         else
             echo "Nothing to delete.";

@@ -12,7 +12,9 @@
         session_start();
         if (isset($_SESSION['userName'])) { ?>
         Welcome back, <?php echo $_SESSION['userName'] . "!<br >"; ?>
-        <a href="loggingout.php?logout=1">Logout</a>
+        <a href="loggingout.php?logout=1">Logout</a><br >
+        <a href="accountManagement.php">Account Management</a><br >
+        <a href="gamelist.php">Game List</a>
     </div> <hr />
     <h3>Game Info: </h3>
     

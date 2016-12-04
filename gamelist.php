@@ -14,7 +14,8 @@
         <h1>Videogames of 2016</h1>
         <div id="logout">
             Welcome back, <?php echo $_SESSION['userName'] . "!<br />"; ?>
-            <a href="loggingout.php?logout=1">Logout</a>
+            <a href="loggingout.php?logout=1">Logout</a><br >
+            <a href="accountManagement.php">Account Management</a>
         </div>
         <hr >
 

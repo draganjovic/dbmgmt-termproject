@@ -1,5 +1,5 @@
-body {
-    background: black;
+body { 
+    background: rgb(54, 48, 83);
     color: whitesmoke;
 }
 
@@ -24,8 +24,12 @@ h1 {
     color: aqua;
 }
 
+a {
+    color: red;
+}
+
 a:hover {
-    color: aqua;
+    color: darksalmon;
 }
 
 a:visited {
