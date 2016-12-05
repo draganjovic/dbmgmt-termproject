@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     $("#userName").on("blur", function () {
 
-        if(!/^[a-zA-Z]$/.test($(this).val())) {
+        if(!/^[a-zA-Z]{4,20}$/.test($(this).val())) {
             $(this).addClass("invalid");
         } else {
             $(this).removeClass("invalid");
