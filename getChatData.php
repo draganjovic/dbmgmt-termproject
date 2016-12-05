@@ -12,7 +12,7 @@
     $result = mysqli_query($conn, $qry);
 
     while($row = mysqli_fetch_array($result)) {
-        echo $row['username'] . ": " . $row['message'] . "\n";
+        echo "<b>" . $row['username'] . ":</b> " . $row['message'] . "<br >";
     }
 
     $conn->close();

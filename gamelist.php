@@ -16,7 +16,7 @@
             Welcome back, <?php echo $_SESSION['userName'] . "!<br />"; ?>
             <a href="loggingout.php?logout=1">Logout</a><br >
             <a href="accountManagement.php">Account Management</a>
-        </div>
+        </div></div>
         <hr >
 
         <table align="left" cellspacing="5" cellpadding="8">
@@ -83,6 +83,5 @@
         else header('Location: login.php');
         ?>
 
-    </div>
 </body>
 </html>

@@ -3,15 +3,23 @@ body {
     color: whitesmoke;
 }
 
-h1 {
+#loginForm {
+    margin-top: 50px;
     text-align: center;
 }
 
-#loginForm {
-    margin-top: 50px;
+#gamelistOverall {
+    text-align: center;
+}
+
+#gameInfoOverall {
+    text-align: center;
 }
 
 #loginOverall {
+    text-align: center;
+}
+#accountManagementOverall {
     text-align: center;
 }
 
@@ -19,9 +27,15 @@ h1 {
     text-align: center;
 }
 
+h1 {
+    text-align: center;
+    display: inline-block;
+}
+
 #logout {
     text-align: right;
     color: aqua;
+    float: right;
 }
 
 a {

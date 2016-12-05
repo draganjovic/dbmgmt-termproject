@@ -1,3 +1,39 @@
-#sendMessageBox {
-    
+#recieveMessageBox {
+    border-style: solid;
+    border-width: 1px;
+    overflow-y: scroll;
+    height: 35em;
+    width: 67em;
+}
+
+body { 
+    background: rgb(54, 48, 83);
+    color: whitesmoke;
+}
+
+#chatOverall {
+    text-align: center;
+}
+
+h1 {
+    display:inline-block;
+    text-align: center;
+}
+
+#logout {
+    text-align: right;
+    color: aqua;
+    float: right;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: darksalmon;
+}
+
+a:visited {
+    color: chartreuse;
 }

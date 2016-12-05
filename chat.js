@@ -5,7 +5,7 @@ $(document).ready(function(){
         $.ajax({
             url:"getChatData.php",
         }).done(function(response){
-            $('#msgs').val(response);    
+            $('#msgs').html(response);    
         });
         
     }, 5000);

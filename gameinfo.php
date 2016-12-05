@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
+<div id="gameInfoOverall">
     <h1>Videogames of 2016</h1>
     <div id="logout">
         <?php
@@ -15,7 +15,7 @@
         <a href="loggingout.php?logout=1">Logout</a><br >
         <a href="accountManagement.php">Account Management</a><br >
         <a href="gamelist.php">Game List</a>
-    </div> <hr />
+    </div> </div> <hr />
     <h3>Game Info: </h3>
     
         <?php

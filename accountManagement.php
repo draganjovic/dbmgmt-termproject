@@ -15,7 +15,7 @@
         <a href="loggingout.php?logout=1">Logout</a><br >
         <?php } ?>
         <a href="gamelist.php">Game List</a>
-    </div> <hr />
+        </div> </div><hr />
         <h3>Account Management: </h3>
         
         <div id="accountInformation">
@@ -170,9 +170,6 @@
                 echo "No information to display.";
             }
             ?>
-            
-        </div>
-    </div>
     
 </body>
 </html>
