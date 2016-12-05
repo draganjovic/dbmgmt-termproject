@@ -22,7 +22,7 @@
             <label><b>Username: </b></label><input type="text" id="userName" name="userName" size="20" maxlength="20"><br ><br >
             <label><b>Password: </b></label><input type="text" id="password" name="password" size="20" maxlength="20"><br ><br >
             <label><b>Retype Password: </b></label><input type="text" id="passwordCheck" name="passwordCheck" size="20" maxlength="20"><br ><br >
-            <input type="submit" name="submit" id="submit">
+            <button type="submit" name="submit" id="submit">Submit</button>
         </form>
     </div>
     

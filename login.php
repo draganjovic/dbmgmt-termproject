@@ -22,7 +22,7 @@
             <form action="loggingin.php" method="post">
                 <label><b>Username:</b> </label><input type="text" id="userName" name="userName" size="20" maxlength="20"><br > <br >
                 <label><b>Password:</b> </label><input type="password" id="password" name="password" size="20" maxlength="20"><br > <br >
-                <input type="submit" id="login" name="login">
+                <button type="submit" id="login" name="login">Submit</button>
             </form>
 
             <p>Don't have a account?  <a href="accountcreate.php">Sign Up</a>!</p>

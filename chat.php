@@ -49,9 +49,7 @@
         </form>
     </div>
     
-    <script type="text/javascript" src="chat.js"></script>
-    
-    <?php }
+    <?php echo "<script type='text/javascript' src='chat.js'></script>"; }
     else {
         header('location: login.php');
     }
