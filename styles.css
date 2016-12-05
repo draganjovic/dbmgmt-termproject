@@ -49,3 +49,11 @@ a:hover {
 a:visited {
     color: chartreuse;
 }
+
+.invalid {
+    
+    border-color: red;
+    border-width: 2px;
+    background-color:darkgray;
+    
+}

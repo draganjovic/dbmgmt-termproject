@@ -1,21 +1,39 @@
-//validate passwords match
+$(document).ready(function(){
 
-$("form").submit(function() {
+    $("#userName").on("blur", function () {
+
+        if(!/^[a-zA-Z]$/.test($(this).val())) {
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+
+    });
     
-    if($("#password").attr('value') != $("#passwordCheck").attr('value')) {
-        alert("Passwords do not match");
-        return false;
-    }
-    else if ($("#userName").attr('value') == "" || $("#password").attr('value') == "") {
-        alert("Please fill in all the fields correctly!");
-        return false;
-    }
-    //TODO: FIX THIS
-    /*
-    else if (!($("#password").matches("/^D+[0-9]+/"))) {
-        alert("Password needs to start with a digit and end with a digit.");
-        return false;
-    }*/
-    else return true;
-    
-}); 
+    $("#password").on("blur", function () {
+
+        if (!/^(?=.*\d).{6,20}$/.test($(this).val())) {
+            $(this).addClass("invalid");
+        } else {
+            $(this).removeClass("invalid");
+        }
+
+    });
+
+    $("#submit").on("click", function() {
+
+        if($("*").hasClass("invalid")) {
+            alert("Invalid input");
+            return false;
+        }
+        if($("#userName").val() == "" || $("#password").val() == "" || $("#passwordCheck").val() == "") {
+            alert("Please fill in all fields");
+            return false;
+           }
+        if($("#password").val() != $("#passwordCheck").val()) {
+            alert("Passwords do not match!");
+            return false;
+        }
+
+    });
+});

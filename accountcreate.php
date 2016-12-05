@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Account Creation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
     <?php 
@@ -26,7 +26,7 @@
         </form>
     </div>
     
-    <script type="text/javascript" src="acctcrtvalidate.js"></script>
+    <script src="acctcrtvalidate.js"></script>
 
 </body>
 </html>
