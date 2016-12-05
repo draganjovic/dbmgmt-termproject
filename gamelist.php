@@ -15,7 +15,8 @@
         <div id="logout">
             Welcome back, <?php echo $_SESSION['userName'] . "!<br />"; ?>
             <a href="loggingout.php?logout=1">Logout</a><br >
-            <a href="accountManagement.php">Account Management</a>
+            <a href="accountManagement.php">Account Management</a><br >
+            <a href="chat.php">Chat</a>
         </div></div>
         <hr >
 

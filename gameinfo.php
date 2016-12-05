@@ -15,7 +15,9 @@
         <a href="loggingout.php?logout=1">Logout</a><br >
         <a href="accountManagement.php">Account Management</a><br >
         <a href="gamelist.php">Game List</a>
-    </div> </div> <hr />
+        <br >
+            <a href="chat.php">Chat</a><br >
+    </div> </div> <br ><hr />
     <h3>Game Info: </h3>
     
         <?php
