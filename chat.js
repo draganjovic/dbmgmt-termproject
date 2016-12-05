@@ -8,6 +8,6 @@ $(document).ready(function(){
             $('#msgs').html(response);    
         });
         
-    }, 5000);
+    }, 10);
 
 });

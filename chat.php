@@ -18,14 +18,33 @@
         <a href="accountManagement.php">Account Management</a><br >
         <a href="gamelist.php">Game List</a>
     </div> </div> <br ><hr />
+    <?php 
     
+        if (isset($_POST['submit'])) {
+            $qry = "INSERT INTO chatMessage(username, message) VALUES ('{$_SESSION['userName']}', '{$_POST['newMsg']}');";
+            
+            //connect to the database
+            $conn = mysqli_connect("localhost:3306", "root", "", "dbmgmt");
+            //check for failure
+            if ($conn->connect_errno) {
+                printf("connection failed %s\n", $conn->connect_error);
+                exit();
+            }
+            
+            mysqli_query($conn, $qry);
+            
+            $conn->close();
+            
+        }
+    
+    ?>
     <h3>Videogames Chatroom</h3>
     <div id="recieveMessageBox">
         <p name="msgs" id="msgs"></p>
     </div>
     <div id="sendMessageBox"><br >
         <form action="" method="post">
-            <textarea rows="5" cols="150"></textarea><br >
+            <textarea name="newMsg" id="newMsg" rows="5" cols="150" maxlength="200"></textarea><br >
             <button type="submit" name="submit" id="submit">Send</button>
         </form>
     </div>
